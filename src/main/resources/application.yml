@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: local
+  config:
+    import: "configserver:http://localhost:8082"
+  cloud:
+    config:
+      name: omarket
+      profile: dev
